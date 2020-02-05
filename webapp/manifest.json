@@ -1,0 +1,20 @@
+{
+	"sap.app": {
+		"id": "fokind.kanban",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"rootView": {
+			"viewName": "fokind.kanban.view.App",
+			"type": "XML"
+		}
+	}
+}
