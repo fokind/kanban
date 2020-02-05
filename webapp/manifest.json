@@ -12,6 +12,12 @@
 				"sap.m": {}
 			}
 		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./data/data.json"
+			}
+		},
 		"rootView": {
 			"viewName": "fokind.kanban.view.App",
 			"type": "XML"

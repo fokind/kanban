@@ -1,39 +1,15 @@
 <mvc:View controllerName="fokind.kanban.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:grid="sap.ui.layout.cssgrid" xmlns="sap.m">
 	<App>
 		<Page title="Kanban">
-			<grid:CSSGrid gridAutoFlow="Column" gridTemplateColumns="repeat(3, 1fr)" gridAutoColumns="1fr">
-				<List>
+			<grid:CSSGrid gridTemplateColumns="repeat({=${/}.length}, 1fr)"
+				items="{/}">
+				<List items="{tasks}">
 					<headerToolbar>
 						<Toolbar>
-							<Title text="To do"/>
+							<Title text="{status}"/>
 						</Toolbar>
 					</headerToolbar>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-				</List>
-				<List>
-					<headerToolbar>
-						<Toolbar>
-							<Title text="In progress"/>
-						</Toolbar>
-					</headerToolbar>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-				</List>
-				<List>
-					<headerToolbar>
-						<Toolbar>
-							<Title text="Done"/>
-						</Toolbar>
-					</headerToolbar>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
-					<StandardListItem title="task"/>
+					<StandardListItem title="{summary}"/>
 				</List>
 			</grid:CSSGrid>
 		</Page>
