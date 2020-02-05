@@ -1,6 +1,41 @@
-<mvc:View controllerName="fokind.kanban.controller.App" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:unified="sap.ui.unified"
-	xmlns="sap.m">
+<mvc:View controllerName="fokind.kanban.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:grid="sap.ui.layout.cssgrid" xmlns="sap.m">
 	<App>
-		<Page title="Kanban"></Page>
+		<Page title="Kanban">
+			<grid:CSSGrid gridAutoFlow="Column" gridTemplateColumns="repeat(3, 1fr)" gridAutoColumns="1fr">
+				<List>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="To do"/>
+						</Toolbar>
+					</headerToolbar>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+				</List>
+				<List>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="In progress"/>
+						</Toolbar>
+					</headerToolbar>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+				</List>
+				<List>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="Done"/>
+						</Toolbar>
+					</headerToolbar>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+					<StandardListItem title="task"/>
+				</List>
+			</grid:CSSGrid>
+		</Page>
 	</App>
 </mvc:View>
